@@ -1,0 +1,96 @@
+/* Configuración general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D8BFD8; /* Morado pastel */
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, rgba(216, 191, 216, 0.6), white, rgba(216, 191, 216, 0.6)); 
+}
+
+/* Panel izquierdo - Redes sociales */
+.left-panel {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-panel h2 {
+    margin-bottom: 20px;
+}
+
+/* Botones de redes sociales */
+.social-btn {
+    display: block;
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.instagram {
+    background: #E1306C;
+}
+
+.twitter {
+    background: #1DA1F2;
+}
+
+.tiktok {
+    background: #000;
+}
+
+.social-btn:hover {
+    opacity: 0.8;
+}
+
+/* Panel derecho - Perfil */
+.right-panel {
+    width: 50%;
+    text-align: center;
+    padding: 40px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #6a1b9a;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #6a1b9a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.contact-btn:hover {
+    background: #4a148c;
+}

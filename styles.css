@@ -36,7 +36,7 @@ body {
 }
 
 /* Para móviles: Redes y perfil en columna */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .container {
         flex-direction: column;
         text-align: center;

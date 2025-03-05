@@ -8,12 +8,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px;
 }
 
 /* Contenedor principal */
 .container {
     display: flex;
-    width: 80%;
+    flex-wrap: wrap; /* Permite adaptación en móviles */
+    width: 90%;
     max-width: 1000px;
     border-radius: 10px;
     overflow: hidden;
@@ -22,16 +24,26 @@ body {
 }
 
 /* Panel izquierdo - Redes sociales */
-.left-panel {
-    width: 50%;
+.left-panel, .right-panel {
+    flex: 1;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.left-panel h2 {
+/* Para móviles: Las redes y el perfil en una columna */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Títulos */
+h2 {
     margin-bottom: 20px;
+    font-size: 1.5rem;
 }
 
 /* Botones de redes sociales */
@@ -46,28 +58,23 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    transition: 0.3s;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
 }
 
-.instagram {
-    background: #E1306C;
-}
+/* Colores de cada red social */
+.instagram { background: #E1306C; }
+.twitter { background: #1DA1F2; }
+.tiktok { background: #000; }
+.youtube { background: #FF0000; }
 
-.twitter {
-    background: #1DA1F2;
-}
-
-.tiktok {
-    background: #000;
-}
-
-.social-btn:hover {
-    opacity: 0.8;
+/* Animación al pasar el mouse */
+.social-btn:hover, .contact-btn:hover, .profile-img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 /* Panel derecho - Perfil */
 .right-panel {
-    width: 50%;
     text-align: center;
     padding: 40px;
 }
@@ -77,8 +84,10 @@ body {
     height: 120px;
     border-radius: 50%;
     border: 4px solid #6a1b9a;
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Botón de contacto */
 .contact-btn {
     display: inline-block;
     margin-top: 15px;
@@ -88,9 +97,5 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s;
-}
-
-.contact-btn:hover {
-    background: #4a148c;
+    transition: transform 0.3s ease-in-out, background 0.3s;
 }
